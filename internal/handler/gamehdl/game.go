@@ -15,6 +15,7 @@ func New() Handler {
 
 func (h *handler) Test(ctx fiber.Ctx) error {
 	// Example handler logic
+	// This could be replaced with actual game logic
 	return ctx.JSON(fiber.Map{
 		"message": "Test endpoint hit",
 	})
