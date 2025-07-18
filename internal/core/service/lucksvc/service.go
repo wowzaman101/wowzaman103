@@ -74,11 +74,11 @@ func calculateHit(hand []domain.Card) DRAW {
 		return HIT
 	}
 
-	if sum == 0 {
-		return HIT
+	if sum > 5 && randomSeed(500) {
+		return STAND
 	}
 
-	return STAND
+	return HIT
 }
 
 func normalizeNumber(n int) int {

@@ -37,5 +37,5 @@ func (h *handler) DoYouTrustInLuck(ctx fiber.Ctx) error {
 			"error": "Failed to process request",
 		})
 	}
-	return ctx.JSON(response)
+	return ctx.JSON(response.Response)
 }
