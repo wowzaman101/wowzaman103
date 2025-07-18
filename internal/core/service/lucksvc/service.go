@@ -74,6 +74,10 @@ func calculateHit(hand []domain.Card) DRAW {
 		return HIT
 	}
 
+	if sum == 0 {
+		return HIT
+	}
+
 	return STAND
 }
 
