@@ -10,7 +10,7 @@ import (
 	"coding-games/internal/handler/gamehdl"
 	"log"
 
-	"github.com/gofiber/fiber/v3"åå
+	"github.com/gofiber/fiber/v3"
 	"github.com/google/wire"
 )
 

@@ -4,6 +4,7 @@ go 1.24.5
 
 require (
 	github.com/gofiber/fiber/v3 v3.0.0-beta.4
+	github.com/google/wire v0.6.0
 	github.com/joho/godotenv v1.5.1
 	github.com/kelseyhightower/envconfig v1.4.0
 )
