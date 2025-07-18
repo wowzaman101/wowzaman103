@@ -9,6 +9,7 @@ package main
 import (
 	"coding-games/config"
 	"coding-games/infrastructure/server"
+	"coding-games/internal/core/service/lucksvc"
 	"coding-games/internal/handler/gamehdl"
 	"github.com/gofiber/fiber/v3"
 	"log"
@@ -17,7 +18,8 @@ import (
 // Injectors from main.go:
 
 func initialize() *dependencies {
-	handler := gamehdl.New()
+	service := lucksvc.New()
+	handler := gamehdl.New(service)
 	app := server.New(handler)
 	mainDependencies := &dependencies{
 		server: app,

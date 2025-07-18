@@ -6,10 +6,11 @@ package main
 import (
 	"coding-games/config"
 	"coding-games/infrastructure/server"
+	"coding-games/internal/core/service/lucksvc"
 	"coding-games/internal/handler/gamehdl"
 	"log"
 
-	"github.com/gofiber/fiber/v3"
+	"github.com/gofiber/fiber/v3"åå
 	"github.com/google/wire"
 )
 
@@ -21,6 +22,7 @@ func initialize() *dependencies {
 	wire.Build(
 		server.New,
 		gamehdl.New,
+		lucksvc.New,
 		wire.Struct(new(dependencies), "server"),
 	)
 	return nil
